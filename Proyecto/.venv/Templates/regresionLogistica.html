@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regresión Logística: Conceptos y Casos de Uso</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Regresión Logística: Conceptos y Casos de Uso</h1>
+    </header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <a href="{{ url_for('home') }}">
+                <li>Inicio</li>
+            </a>
+            <a href="{{ url_for('casoUso') }}">
+                <li>Caso de Uso</li>
+            </a>
+            <a href="{{ url_for('linear_regression') }}">
+                <li>Regresión Lineal</li>
+            </a>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Descripción</h2>
+        <p>La regresión logística es una técnica estadística ampliamente utilizada en el análisis de datos para modelar
+            la relación entre un conjunto de variables independientes y una variable dependiente categórica. A
+            diferencia de la regresión lineal, su objetivo no es predecir valores continuos, sino probabilidades
+            asociadas a distintas categorías. Este modelo es fundamental en problemas de clasificación, como la
+            detección de fraude financiero, la segmentación de clientes en marketing y el diagnóstico médico. Su
+            simplicidad y eficiencia la convierten en una herramienta esencial en análisis predictivo y machine
+            learning.</p>
+    </div>
+
+    <div class="container">
+        <a href="/static/imagenes/imagen.jfif" data-title="Descripción de la imagen">
+            <img src="/static/imagenes/imagen.jfif" alt="Descripción de la imagen"
+                style="max-width: 100%; height: auto; border-radius: 8px;">
+        </a>
+    </div>
+
+
+    <div>
+        <h2>Referencias</h2>
+        <p>
+        <ul>
+            <li>Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). Applied Logistic Regression. John Wiley & Sons.
+            </li>
+            <li>Kleinbaum, D. G., & Klein, M. (2010). Logistic Regression: A Self-Learning Text. Springer.</li>
+            <li>Ng, A. (2004).Feature selection, L1 vs. L2 regularization, and rotational invariance. Proceedings of the
+                Twenty-first International Conference on Machine Learning</li>
+        </ul>
+        </p>
+    </div>
+
+
+    <footer>
+        <p>Realizado por Daniel Alejandro Bernal Sánchez, Diego Alejandro Vacca Rodriguez y Carlos Dariel Pinilla
+            Ritiva<br>Para la asignatura de Machine Learning 601N</p>
+    </footer>
+</body>
+
+</html>
