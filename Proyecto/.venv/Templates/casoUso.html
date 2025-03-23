@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso de Uso: Generación de Ideas Creativas</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/example.css">
+</head>
+
+<body>
+    <header>
+        <h1>Caso de uso Machine Learning supervisado en sistemas de recomendacion</h1>
+    </header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <a href="{{ url_for('home') }}"><li>Inicio</li></a>
+            <a href="{{ url_for('linear_regression') }}"><li>Regresión Lineal</li></a>
+            <a href="{{ url_for('regresionLogistica') }}"><li>Regresión Logistica</li></a>
+        </ul>
+    </nav>
+    <div class="container">
+
+        <h1>Plataformas de Streaming</h2>
+
+            <h2>Problema:</h2>
+            <p>Las plataformas de streaming enfrentan el desafío de mantener a los usuarios comprometidos al ofrecer
+                contenido que se alinee con sus preferencias individuales. La vasta cantidad de opciones disponibles
+                puede resultar abrumadora, lo que podría llevar a la insatisfacción del usuario y a una posible
+                cancelación del servicio.</p>
+
+            <h2>Algoritmo Utilizado:</h2>
+            <ul>
+                <li>Maquinas de Vectores de Soporte (SVM)</li>
+                <li>Redes Neuronales</li>
+            </ul>
+
+            <p>Se implementan algoritmos de aprendizaje supervisado, como máquinas de vectores de soporte (SVM) y redes
+                neuronales, para analizar el historial de visualización de los usuarios y predecir sus preferencias
+                futuras. Estos modelos se entrenan con datos etiquetados que reflejan las interacciones pasadas de los
+                usuarios con el contenido.</p>
+
+            <h2>Beneficios Obtenidos:</h2>
+            <ul>
+                <li>Mejora en la personalizacion de contenido.</li>
+                <li>Incremento en la retencion y satisfaccion del usuario.</li>
+                <li>Mayor tiempo de uso de la plataforma.</li>
+            </ul>
+
+            <p>Al proporcionar recomendaciones personalizadas, las plataformas aumentan la satisfacción y retención de
+                los usuarios. Esto se traduce en una mayor lealtad y en un incremento en el tiempo de uso de la
+                plataforma. Mas informacion <a
+                    href="https://www.aden.org/business-magazine/inteligencia-artificial-casos-de-exito-empresarial/">aqui</a>​
+            </p>
+
+            <h2>Ejemplos de Empresas que lo Aplican:</h2>
+            <table>
+                <tr>
+                    <th>Empresa</th>
+                    <th>Aplicacion del Machine Learning</th>
+                </tr>
+                <tr>
+                    <td><strong>Netflix</strong></td>
+                    <td>Analiza patrones de comportamiento como valoraciones y generos preferidos para ofrecer
+                        recomendaciones personalizadas. Mas informacin <a
+                            href="https://blog.beservices.es/blog/ejemplos-de-machine-learning-en-empresas">aquí</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Spotify</strong></td>
+                    <td>Utiliza modelos de IA para entender los gustos musicales y sugerir canciones y listas de
+                        reproduccion adaptadas. Más informacion <a
+                            href="https://www.aden.org/business-magazine/inteligencia-artificial-casos-de-exito-empresarial/">aqui</a>
+                    </td>
+                </tr>
+            </table>
+    </div>
+
+    <div class="container">
+        <h2>Referencias</h2>
+        <ul>
+            <li>Beservices. (s.f.).<a href="https://blog.beservices.es/blog/ejemplos-de-machine-learning-en-empresas">Ejemplos de Machine
+                Learning en empresas</a>, julio de 2020</li>
+            <li>Aden Business Magazine. (s.f.). Inteligencia artificial:<a href="https://www.aden.org/business-magazine/inteligencia-artificial-casos-de-exito-empresarial/">10
+                Casos de Éxito de Empresas que Aplican Inteligencia Artificial</a>, febrero de 2025</li>
+        </ul>
+    </div>
+    <footer>
+        <p>Realizado por Daniel Alejandro Bernal Sánchez, Diego Alejandro Vacca Rodriguez y Carlos Dariel Pinilla
+            Ritiva<br>Para la asignatura de Machine Learning 601N</p>
+    </footer>
+</body>
+
+</html>

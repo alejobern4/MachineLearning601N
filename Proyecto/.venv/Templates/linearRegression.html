@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Regression</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/linearRegression.css">
+</head>
+<body>
+    <header>
+        <h1>Regresion lineal Horas de estudio y calificacion</h1>
+    </header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <a href="{{ url_for('home') }}"><li>Inicio</li></a>
+            <a href="{{ url_for('casoUso') }}"><li>Caso de Uso</li></a>
+            <a href="{{ url_for('regresionLogistica') }}"><li>Regresión Logistica</li></a>
+        </ul>
+    </nav>
+    <div class="containerPadre">
+        <div class="containerHijo">
+            <h2>Objetivo</h2>
+            <p>El objetivo es predecir la calificacion final de un estudiante en funcion de las horas de estudio utilizando Regresion Lineal. Se busca analizar como influye el tiempo de estudio en el rendimiento academico y generar un modelo que permita estimar la calificacion de un estudiante con base en las horas que dedica a estudiar.</p>
+        </div>
+        <div class="containerHijo">
+            <h2>Descripción del dataset</h2>
+            <p>El dataset contiene dos variables principales.</p>
+                <ul>
+                    <li>Horas de Estudio: Representa la cantidad de horas que un estudiante dedica a estudiar. Es un valor numerico continuo.</li>
+                    <li>Calificacion: Representa la calificacion obtenida por el estudiante en una escala continua.</li>
+                </ul>
+        </div>
+    </div>
+
+    <hr>
+    
+    <div class="container">
+        <form method="POST">
+            <label for="hours">Horas de estudio:</label>
+            <input type="number" name="hours" id="hours" step="any" required>
+            <button type="submit">Calcular</button>
+        </form>
+
+        {% if result is not none %}
+            <h2>Calificacion : {{ result }}%</h2>
+        {% endif %}
+
+        {% if plot_url %}
+            <h2>Grafica de Regresion Lineal</h2>
+            <img src="data:image/png;base64,{{ plot_url }}" alt="Gráfica de Regresión">
+        {% endif %}
+    </div>
+    
+
+    <footer>
+        <p>Realizado por Daniel Alejandro Bernal Sánchez, Diego Alejandro Vacca Rodriguez y Carlos Dariel Pinilla
+            Ritiva<br>Para la asignatura de Machine Learning 601N</p>
+    </footer>
+</body>
+</html>
