@@ -29,6 +29,7 @@ footer, header {
     color: whitesmoke;
     background-color:#007BFF;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
