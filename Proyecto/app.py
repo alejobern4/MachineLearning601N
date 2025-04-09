@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 from datetime import datetime
 import re
-import linearRegression
-from regresionLogistica import regresion_logisitica, prediccion
+from . import linearRegression
+from .regresionLogistica import regresion_logisitica, prediccion
 
 app = Flask(__name__)
 
@@ -42,7 +42,7 @@ def linear_regression():
 
 @app.route("/mapaRegresionLogistica")
 def mapaRegresionLogistica():
-    return render_template("regresionLogistica.html")
+    return render_template("mapaRegresionLogistica.html")
 
 
 @app.route('/regresionLogistica', methods=['GET', 'POST'])
