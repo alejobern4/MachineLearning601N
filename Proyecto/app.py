@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from datetime import datetime
 import re
 import linearRegression
+from regresionLogistica import regresion_logisitica, prediccion
 
 app = Flask(__name__)
 
@@ -39,6 +40,20 @@ def linear_regression():
     
     return render_template("linearRegression.html", result=calculateResult, plot_url=plot_url)
 
-@app.route("/regresionLogistica")
+@app.route("/MapaRegresionLogistica")
+def mapaRegresionLogistica():
+    return render_template("mapaRegresionLogistica.html")
+
+@app.route('/regresionLogistica', methods=['GET', 'POST'])
 def regresionLogistica():
-    return render_template("regresionLogistica.html")
+    prediction = None
+    result, plot_url = regresion_logisitica()
+
+    if request.method == 'POST':
+        nivel = float(request.form['nivel'])
+        frecuencia = float(request.form['frecuencia'])
+        dispositivo = int(request.form['dispositivo'])
+        prediction = prediccion(nivel, frecuencia, dispositivo)
+
+    return render_template('regresionLogistica.html', result=result, prediction=prediction, plot_url=plot_url)
+

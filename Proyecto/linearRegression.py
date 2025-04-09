@@ -7,10 +7,9 @@ import matplotlib.pyplot as plt
 import base64
 import io
 
-#Data Linear Regression
-ruta_json = "archivo_reestructurado.json"
+ruta_json = "Datos/archivo_reestructurado.json"
 
-ruta_json = os.path.join(os.path.dirname(__file__), "archivo_reestructurado.json")
+ruta_json = os.path.join(os.path.dirname(__file__), "Datos/archivo_reestructurado.json")
 
 with open(ruta_json, "r", encoding="utf-8") as file:
     data = json.load(file)
