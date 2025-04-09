@@ -1,0 +1,55 @@
+# 🐍 Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+
+# 📦 Entorno virtual
+venv/
+.env/
+.env
+.venv/
+ENV/
+env/
+pip-selfcheck.json
+
+# 🔐 Archivos de entorno (variables secretas, claves, etc.)
+*.env
+*.env.*
+
+# 🔄 Archivos temporales y de logs
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# ⚙️ Archivos de configuración del IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# 🗃️ Archivos de bases de datos temporales o caché
+instance/
+*.db
+*.sqlite3
+*.cache
+.cache/
+
+# 📁 Carpeta de migraciones (si usás Flask-Migrate y no querés subirla toda)
+migrations/
+
+# 🧪 Archivos de pruebas
+.coverage
+htmlcov/
+tests/__pycache__/
+
+# 🚫 Otros archivos específicos del proyecto
+Datos/cache.json
