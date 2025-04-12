@@ -1,56 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
+
 <body>
     <header>
         <h1>Portafolio Machine Learning</h1>
     </header>
     <nav class="navbar">
         <ul class="nav-links">
-            <a href="{{ url_for('home') }}"><li>Inicio</li></a>
-            <a href="{{ url_for('linear_regression') }}"><li>Regresión Lineal</li></a>
-            <a href="{{ url_for('casoUso') }}"><li>Caso de Uso</li></a>
-            <a href="{{ url_for('mapaRegresionLogistica') }}"><li>Regresión Logistica</li></a>
-            <a href="{{ url_for('regresionLogistica') }}"><li>Regresión Logistica</li></a>
+            <a href="{{ url_for('home') }}">
+                <li>Inicio</li>
+            </a>
+            <a href="{{ url_for('linear_regression') }}">
+                <li>Regresión Lineal</li>
+            </a>
+            <a href="{{ url_for('casoUso') }}">
+                <li>Caso de Uso</li>
+            </a>
+            <a href="{{ url_for('mapaRegresionLogistica') }}">
+                <li>Regresión Logistica</li>
+            </a>
+            <a href="{{ url_for('regresionLogistica') }}">
+                <li>Regresión Logistica</li>
+            </a>
+            <a href="{{ url_for('mostrarModelos') }}">
+                <li>Modelos Clasificacion</li>
+            </a>
         </ul>
     </nav>
     <div class="container">
-        <h2>Caso de uso Machine Learning supervisado en sistemas de recomendacion</h2>
-        <a href="{{ url_for('casoUso') }}" style="text-decoration: none;">
-            <button>
-                Ir al caso de uso
-            </button>
-        </a>
-        <h2>Prediccion Horas de estudio y calificacion</h2>
-        <a href="{{ url_for('linear_regression') }}" style="text-decoration: none;">
-            <button>
-                Ir a la regresion lineal
-            </button>
-        </a>
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <h3>Caso de uso Machine Learning supervisado en sistemas de recomendacion</h3>
+                <a href="{{ url_for('casoUso') }}" style="text-decoration: none;">
+                    <button>
+                        Ir al caso de uso
+                    </button>
+                </a>
+            </li>
+            <li>
+                <h3>Prediccion Horas de estudio y calificacion</h3>
+                <a href="{{ url_for('linear_regression') }}" style="text-decoration: none;">
+                    <button>
+                        Ir a la regresion lineal
+                    </button>
+                </a>
+            </li>
+            <li>
+                <h3>Mapa Mental Regresion Logistica</h3>
+                <a href="{{ url_for('mapaRegresionLogistica') }}" style="text-decoration: none;">
+                    <button>
+                        Ir a la mapa mental
+                    </button>
+                </a>
+            </li>
+            <li>
+                <h3>Modelo Regresion Logistica</h3>
+                <a href="{{ url_for('regresionLogistica') }}" style="text-decoration: none;">
+                    <button>
+                        Ir a la regresion logistica
+                    </button>
+                </a>
+            </li>
+            <li>
+                <h3>Modelos de Clasificacion</h3>
+                <a href="{{ url_for('mostrarModelos') }}" style="text-decoration: none;">
+                    <button>
+                        Ir a los modelos
+                    </button>
+                </a>
+            </li>
+        </ul>
 
-        <h2>Mapa Mental Regresion Logistica</h2>
-        <a href="{{ url_for('mapaRegresionLogistica') }}" style="text-decoration: none;">
-            <button>
-                Ir a la mapa mental
-            </button>
-        </a>
 
-        <h2>Mapa Mental Regresion Logistica</h2>
-        <a href="{{ url_for('regresionLogistica') }}" style="text-decoration: none;">
-            <button>
-                Ir a la regresion logistica
-            </button>
-        </a>
-        
     </div>
     <footer>
         <p>Realizado por Daniel Alejandro Bernal Sánchez, Diego Alejandro Vacca Rodriguez y Carlos Dariel Pinilla
             Ritiva<br>Para la asignatura de Machine Learning 601N</p>
     </footer>
 </body>
+
 </html>

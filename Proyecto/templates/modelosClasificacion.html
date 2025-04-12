@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Portafolio Machine Learning</h1>
+    </header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <a href="{{ url_for('home') }}">
+                <li>Inicio</li>
+            </a>
+            <a href="{{ url_for('linear_regression') }}">
+                <li>Regresión Lineal</li>
+            </a>
+            <a href="{{ url_for('casoUso') }}">
+                <li>Caso de Uso</li>
+            </a>
+            <a href="{{ url_for('mapaRegresionLogistica') }}">
+                <li>Regresión Logistica</li>
+            </a>
+            <a href="{{ url_for('regresionLogistica') }}">
+                <li>Regresión Logistica</li>
+            </a>
+            <a href="{{ url_for('mostrarModelos') }}">
+                <li>Modelos Clasificacion</li>
+            </a>
+        </ul>
+    </nav>     
+    <div class="container">
+        <h2>Lista de Modelos</h2>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+            </tr>
+            {% for modelo in modelos %}
+            <tr>
+                <td>{{ modelo[0] }}</td>
+                <td>
+                    <a href="{{ url_for('detalle_modelo', modelo_id=modelo[0]) }}">
+                        {{ modelo[1] }}
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <footer>
+        <p>Realizado por Daniel Alejandro Bernal Sánchez, Diego Alejandro Vacca Rodriguez y Carlos Dariel Pinilla
+            Ritiva<br>Para la asignatura de Machine Learning 601N</p>
+    </footer>
+</body>
+
+</html>
