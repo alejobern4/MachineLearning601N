@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
 from datetime import datetime
 import re
-import linearRegression
-from regresionLogistica import regresion_logisitica, prediccion
-from conexionLocalBd import get_local_connection
+from .import linearRegression
+from .regresionLogistica import regresion_logisitica, prediccion
+from .conexionLocalBd import get_local_connection
 from conexionRenderBd import get_render_connection
 from convertidorImagenes import convertirImagen
 
