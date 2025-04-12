@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request
 from datetime import datetime
 import re
-from .import linearRegression
+from . import linearRegression
 from .regresionLogistica import regresion_logisitica, prediccion
 from .conexionLocalBd import get_local_connection
-from conexionRenderBd import get_render_connection
-from convertidorImagenes import convertirImagen
+from .conexionRenderBd import get_render_connection
+from .convertidorImagenes import convertirImagen
 
 app = Flask(__name__)
 

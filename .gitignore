@@ -1,3 +1,5 @@
 /Proyecto/__pycache__
 *.pyc
 Proyecto/.env
+Proyecto/__pycache__/linearRegression.cpython-313.pyc
+Proyecto/__pycache__/app.cpython-313.pyc
