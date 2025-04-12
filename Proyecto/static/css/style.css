@@ -17,7 +17,7 @@ h1{
     color: whitesmoke;
     text-align: center;
 }
-h2 {
+h2, h3 {
     color: black;
 }
 
@@ -50,23 +50,26 @@ footer, header {
     padding: 15px 20px;
 }
 
+.nav-links li:hover{
+    background-color: #f4f4f4b0;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
 .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
 }
+
 .nav-links a:visited {
     color: white;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
 }
-li:hover{
-    background-color: #f4f4f4b0;
-    color: #007BFF;
-    transition: color 0.3s;
-}
+
 hr {
     border: none;
     height: 4px;
@@ -113,10 +116,45 @@ a:visited:hover {
     text-decoration: underline;
 }
 
+.contenedorPadre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .containerImagen{
     background: white;
-    margin: 7em;
-    padding: 10px;
     border-radius: 10px;
+    margin: 0;
+    padding: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f5f9;
+    cursor: pointer;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  

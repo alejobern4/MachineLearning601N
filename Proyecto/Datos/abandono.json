@@ -1,108 +1,638 @@
 [
-    {"nivel": 5, "frecuencia_juego": 2, "dispositivo": 3, "abandono": 1},
-    {"nivel": 8, "frecuencia_juego": 3, "dispositivo": 3, "abandono": 1},
-    {"nivel": 12, "frecuencia_juego": 4, "dispositivo": 1, "abandono": 0},
-    {"nivel": 35, "frecuencia_juego": 7, "dispositivo": 0, "abandono": 0},
-    {"nivel": 15, "frecuencia_juego": 2, "dispositivo": 3, "abandono": 1},
-    {"nivel": 9, "frecuencia_juego": 5, "dispositivo": 2, "abandono": 1},
-    {"nivel": 42, "frecuencia_juego": 9, "dispositivo": 0, "abandono": 0},
-    {"nivel": 6, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 38, "frecuencia_juego": 8, "dispositivo": 1, "abandono": 0},
-    {"nivel": 10, "frecuencia_juego": 2, "dispositivo": 2, "abandono": 1},
-    {"nivel": 4, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 45, "frecuencia_juego": 9, "dispositivo": 0, "abandono": 0},
-    {"nivel": 3, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 29, "frecuencia_juego": 6, "dispositivo": 1, "abandono": 0},
-    {"nivel": 12, "frecuencia_juego": 3, "dispositivo": 2, "abandono": 1},
-    {"nivel": 41, "frecuencia_juego": 8, "dispositivo": 0, "abandono": 0},
-    {"nivel": 7, "frecuencia_juego": 2, "dispositivo": 3, "abandono": 1},
-    {"nivel": 30, "frecuencia_juego": 6, "dispositivo": 0, "abandono": 0},
-    {"nivel": 19, "frecuencia_juego": 3, "dispositivo": 3, "abandono": 1},
-    {"nivel": 50, "frecuencia_juego": 10, "dispositivo": 0, "abandono": 0},
-    {"nivel": 2, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 39, "frecuencia_juego": 7, "dispositivo": 1, "abandono": 0},
-    {"nivel": 5, "frecuencia_juego": 2, "dispositivo": 2, "abandono": 1},
-    {"nivel": 33, "frecuencia_juego": 6, "dispositivo": 0, "abandono": 0},
-    {"nivel": 14, "frecuencia_juego": 4, "dispositivo": 3, "abandono": 1},
-    {"nivel": 37, "frecuencia_juego": 9, "dispositivo": 1, "abandono": 0},
-    {"nivel": 10, "frecuencia_juego": 3, "dispositivo": 2, "abandono": 1},
-    {"nivel": 48, "frecuencia_juego": 9, "dispositivo": 0, "abandono": 0},
-    {"nivel": 16, "frecuencia_juego": 4, "dispositivo": 3, "abandono": 1},
-    {"nivel": 31, "frecuencia_juego": 6, "dispositivo": 0, "abandono": 0},
-    {"nivel": 9, "frecuencia_juego": 2, "dispositivo": 3, "abandono": 1},
-    {"nivel": 25, "frecuencia_juego": 5, "dispositivo": 1, "abandono": 0},
-    {"nivel": 13, "frecuencia_juego": 3, "dispositivo": 2, "abandono": 1},
-    {"nivel": 44, "frecuencia_juego": 8, "dispositivo": 0, "abandono": 0},
-    {"nivel": 7, "frecuencia_juego": 2, "dispositivo": 3, "abandono": 1},
-    {"nivel": 40, "frecuencia_juego": 9, "dispositivo": 0, "abandono": 0},
-    {"nivel": 11, "frecuencia_juego": 3, "dispositivo": 2, "abandono": 1},
-    {"nivel": 36, "frecuencia_juego": 7, "dispositivo": 1, "abandono": 0},
-    {"nivel": 3, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 46, "frecuencia_juego": 10, "dispositivo": 0, "abandono": 0},
-    {"nivel": 6, "frecuencia_juego": 2, "dispositivo": 3, "abandono": 1},
-    {"nivel": 32, "frecuencia_juego": 6, "dispositivo": 0, "abandono": 0},
-    {"nivel": 8, "frecuencia_juego": 3, "dispositivo": 2, "abandono": 1},
-    {"nivel": 43, "frecuencia_juego": 8, "dispositivo": 1, "abandono": 0},
-    {"nivel": 15, "frecuencia_juego": 3, "dispositivo": 3, "abandono": 1},
-    {"nivel": 28, "frecuencia_juego": 5, "dispositivo": 1, "abandono": 0},
-    {"nivel": 4, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 49, "frecuencia_juego": 9, "dispositivo": 0, "abandono": 0},
-    {"nivel": 18, "frecuencia_juego": 4, "dispositivo": 2, "abandono": 1},
-    {"nivel": 35, "frecuencia_juego": 7, "dispositivo": 1, "abandono": 0},
-    {"nivel": 12, "frecuencia_juego": 3, "dispositivo": 2, "abandono": 1},
-    {"nivel": 47, "frecuencia_juego": 9, "dispositivo": 0, "abandono": 0},
-    {"nivel": 20, "frecuencia_juego": 4, "dispositivo": 3, "abandono": 1},
-    {"nivel": 33, "frecuencia_juego": 6, "dispositivo": 1, "abandono": 0},
-    {"nivel": 13, "frecuencia_juego": 2, "dispositivo": 2, "abandono": 1},
-    {"nivel": 38, "frecuencia_juego": 7, "dispositivo": 0, "abandono": 0},
-    {"nivel": 10, "frecuencia_juego": 3, "dispositivo": 3, "abandono": 1},
-    {"nivel": 26, "frecuencia_juego": 6, "dispositivo": 1, "abandono": 0},
-    {"nivel": 5, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 45, "frecuencia_juego": 9, "dispositivo": 0, "abandono": 0},
-    {"nivel": 8, "frecuencia_juego": 3, "dispositivo": 2, "abandono": 1},
-    {"nivel": 31, "frecuencia_juego": 6, "dispositivo": 1, "abandono": 0},
-    {"nivel": 2, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 50, "frecuencia_juego": 10, "dispositivo": 0, "abandono": 0},
-    {"nivel": 9, "frecuencia_juego": 2, "dispositivo": 2, "abandono": 1},
-    {"nivel": 34, "frecuencia_juego": 7, "dispositivo": 1, "abandono": 0},
-    {"nivel": 6, "frecuencia_juego": 2, "dispositivo": 3, "abandono": 1},
-    {"nivel": 42, "frecuencia_juego": 9, "dispositivo": 0, "abandono": 0},
-    {"nivel": 17, "frecuencia_juego": 4, "dispositivo": 2, "abandono": 1},
-    {"nivel": 37, "frecuencia_juego": 8, "dispositivo": 1, "abandono": 0},
-    {"nivel": 14, "frecuencia_juego": 3, "dispositivo": 2, "abandono": 1},
-    {"nivel": 39, "frecuencia_juego": 8, "dispositivo": 0, "abandono": 0},
-    {"nivel": 11, "frecuencia_juego": 3, "dispositivo": 3, "abandono": 1},
-    {"nivel": 36, "frecuencia_juego": 7, "dispositivo": 0, "abandono": 0},
-    {"nivel": 3, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 48, "frecuencia_juego": 10, "dispositivo": 0, "abandono": 0},
-    {"nivel": 7, "frecuencia_juego": 2, "dispositivo": 2, "abandono": 1},
-    {"nivel": 29, "frecuencia_juego": 5, "dispositivo": 1, "abandono": 0},
-    {"nivel": 13, "frecuencia_juego": 2, "dispositivo": 3, "abandono": 1},
-    {"nivel": 46, "frecuencia_juego": 9, "dispositivo": 0, "abandono": 0},
-    {"nivel": 19, "frecuencia_juego": 4, "dispositivo": 2, "abandono": 1},
-    {"nivel": 30, "frecuencia_juego": 6, "dispositivo": 1, "abandono": 0},
-    {"nivel": 4, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 43, "frecuencia_juego": 9, "dispositivo": 0, "abandono": 0},
-    {"nivel": 8, "frecuencia_juego": 3, "dispositivo": 2, "abandono": 1},
-    {"nivel": 27, "frecuencia_juego": 5, "dispositivo": 1, "abandono": 0},
-    {"nivel": 5, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 44, "frecuencia_juego": 9, "dispositivo": 0, "abandono": 0},
-    {"nivel": 16, "frecuencia_juego": 3, "dispositivo": 2, "abandono": 1},
-    {"nivel": 35, "frecuencia_juego": 7, "dispositivo": 1, "abandono": 0},
-    {"nivel": 12, "frecuencia_juego": 3, "dispositivo": 2, "abandono": 1},
-    {"nivel": 41, "frecuencia_juego": 8, "dispositivo": 0, "abandono": 0},
-    {"nivel": 6, "frecuencia_juego": 2, "dispositivo": 3, "abandono": 1},
-    {"nivel": 32, "frecuencia_juego": 6, "dispositivo": 0, "abandono": 0},
-    {"nivel": 9, "frecuencia_juego": 2, "dispositivo": 3, "abandono": 1},
-    {"nivel": 40, "frecuencia_juego": 9, "dispositivo": 1, "abandono": 0},
-    {"nivel": 1, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 18, "frecuencia_juego": 2, "dispositivo": 3, "abandono": 1},
-    {"nivel": 25, "frecuencia_juego": 4, "dispositivo": 2, "abandono": 0},
-    {"nivel": 40, "frecuencia_juego": 7, "dispositivo": 1, "abandono": 0},
-    {"nivel": 10, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 3, "frecuencia_juego": 3, "dispositivo": 3, "abandono": 1},
-    {"nivel": 32, "frecuencia_juego": 8, "dispositivo": 0, "abandono": 0},
-    {"nivel": 7, "frecuencia_juego": 1, "dispositivo": 3, "abandono": 1},
-    {"nivel": 45, "frecuencia_juego": 9, "dispositivo": 1, "abandono": 0},
-    {"nivel": 11, "frecuencia_juego": 2, "dispositivo": 2, "abandono": 1}  
-  ]  
+  {
+    "nivel": 5,
+    "frecuencia_juego": 2,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 8,
+    "frecuencia_juego": 3,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 12,
+    "frecuencia_juego": 4,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 35,
+    "frecuencia_juego": 7,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 15,
+    "frecuencia_juego": 2,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 9,
+    "frecuencia_juego": 5,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 42,
+    "frecuencia_juego": 9,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 6,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 38,
+    "frecuencia_juego": 8,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 10,
+    "frecuencia_juego": 2,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 4,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 45,
+    "frecuencia_juego": 9,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 3,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 29,
+    "frecuencia_juego": 6,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 12,
+    "frecuencia_juego": 3,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 41,
+    "frecuencia_juego": 8,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 7,
+    "frecuencia_juego": 2,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 30,
+    "frecuencia_juego": 6,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 19,
+    "frecuencia_juego": 3,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 50,
+    "frecuencia_juego": 10,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 2,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 39,
+    "frecuencia_juego": 7,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 5,
+    "frecuencia_juego": 2,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 33,
+    "frecuencia_juego": 6,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 14,
+    "frecuencia_juego": 4,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 37,
+    "frecuencia_juego": 9,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 10,
+    "frecuencia_juego": 3,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 48,
+    "frecuencia_juego": 9,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 16,
+    "frecuencia_juego": 4,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 31,
+    "frecuencia_juego": 6,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 9,
+    "frecuencia_juego": 2,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 25,
+    "frecuencia_juego": 5,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 13,
+    "frecuencia_juego": 3,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 44,
+    "frecuencia_juego": 8,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 7,
+    "frecuencia_juego": 2,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 40,
+    "frecuencia_juego": 9,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 11,
+    "frecuencia_juego": 3,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 36,
+    "frecuencia_juego": 7,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 3,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 46,
+    "frecuencia_juego": 10,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 6,
+    "frecuencia_juego": 2,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 32,
+    "frecuencia_juego": 6,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 8,
+    "frecuencia_juego": 3,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 43,
+    "frecuencia_juego": 8,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 15,
+    "frecuencia_juego": 3,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 28,
+    "frecuencia_juego": 5,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 4,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 49,
+    "frecuencia_juego": 9,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 18,
+    "frecuencia_juego": 4,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 35,
+    "frecuencia_juego": 7,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 12,
+    "frecuencia_juego": 3,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 47,
+    "frecuencia_juego": 9,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 20,
+    "frecuencia_juego": 4,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 33,
+    "frecuencia_juego": 6,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 13,
+    "frecuencia_juego": 2,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 38,
+    "frecuencia_juego": 7,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 10,
+    "frecuencia_juego": 3,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 26,
+    "frecuencia_juego": 6,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 5,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 45,
+    "frecuencia_juego": 9,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 8,
+    "frecuencia_juego": 3,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 31,
+    "frecuencia_juego": 6,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 2,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 50,
+    "frecuencia_juego": 10,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 9,
+    "frecuencia_juego": 2,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 34,
+    "frecuencia_juego": 7,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 6,
+    "frecuencia_juego": 2,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 42,
+    "frecuencia_juego": 9,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 17,
+    "frecuencia_juego": 4,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 37,
+    "frecuencia_juego": 8,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 14,
+    "frecuencia_juego": 3,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 39,
+    "frecuencia_juego": 8,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 11,
+    "frecuencia_juego": 3,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 36,
+    "frecuencia_juego": 7,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 3,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 48,
+    "frecuencia_juego": 10,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 7,
+    "frecuencia_juego": 2,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 29,
+    "frecuencia_juego": 5,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 13,
+    "frecuencia_juego": 2,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 46,
+    "frecuencia_juego": 9,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 19,
+    "frecuencia_juego": 4,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 30,
+    "frecuencia_juego": 6,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 4,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 43,
+    "frecuencia_juego": 9,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 8,
+    "frecuencia_juego": 3,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 27,
+    "frecuencia_juego": 5,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 5,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 44,
+    "frecuencia_juego": 9,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 16,
+    "frecuencia_juego": 3,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 35,
+    "frecuencia_juego": 7,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 12,
+    "frecuencia_juego": 3,
+    "dispositivo": 2,
+    "abandono": 1
+  },
+  {
+    "nivel": 41,
+    "frecuencia_juego": 8,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 6,
+    "frecuencia_juego": 2,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 32,
+    "frecuencia_juego": 6,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 9,
+    "frecuencia_juego": 2,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 40,
+    "frecuencia_juego": 9,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 1,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 18,
+    "frecuencia_juego": 2,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 25,
+    "frecuencia_juego": 4,
+    "dispositivo": 2,
+    "abandono": 0
+  },
+  {
+    "nivel": 40,
+    "frecuencia_juego": 7,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 10,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 3,
+    "frecuencia_juego": 3,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 32,
+    "frecuencia_juego": 8,
+    "dispositivo": 0,
+    "abandono": 0
+  },
+  {
+    "nivel": 7,
+    "frecuencia_juego": 1,
+    "dispositivo": 3,
+    "abandono": 1
+  },
+  {
+    "nivel": 45,
+    "frecuencia_juego": 9,
+    "dispositivo": 1,
+    "abandono": 0
+  },
+  {
+    "nivel": 11,
+    "frecuencia_juego": 2,
+    "dispositivo": 2,
+    "abandono": 1
+  }
+]

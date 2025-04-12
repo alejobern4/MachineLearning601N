@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ modelo[1] }}</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/modelos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>{{ modelo[1] }}</h1>
+    </header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <a href="{{ url_for('home') }}">
+                <li>Inicio</li>
+            </a>
+            <a href="{{ url_for('linear_regression') }}">
+                <li>Regresión Lineal</li>
+            </a>
+            <a href="{{ url_for('casoUso') }}">
+                <li>Caso de Uso</li>
+            </a>
+            <a href="{{ url_for('mapaRegresionLogistica') }}">
+                <li>Regresión Logistica</li>
+            </a>
+            <a href="{{ url_for('regresionLogistica') }}">
+                <li>Regresión Logistica</li>
+            </a>
+            <a href="{{ url_for('mostrarModelos') }}">
+                <li>Modelos Clasificacion</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="sidebar">
+        {% for model in modelos %}
+        <a href="/modelosClasificacion/{{ model[0] }}">
+            <span class="icon"><i class="fa-solid fa-robot"></i></span>
+            <span class="text">{{ model[1] }}</span>
+        </a>
+        {% endfor %}
+    </div>
+    <main class="contenido">
+        <div class="container">
+            <h2>Descripción</h2>
+            <p>{{ modelo[2] }}</p>
+
+
+            {% if imagenes64 %}
+            <div class="contenedorPadre">
+                {% for img in imagenes64 %}
+                <div class="containerImagen">
+                    <img src="data:image/webp;base64,{{ img.imagen }}" alt="{{ img.nombre }}" width="500px">
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <p>No hay imágenes asociadas.</p>
+            {% endif %}
+
+
+            <h2>Fuentes de Consulta</h2>
+            {% if fuentes %}
+            <ul>
+                {% for fuente in fuentes %}
+                <li><a href="{{ fuente[0] }}"><strong>{{ fuente[0] }}</strong></a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No hay fuentes registradas.</p>
+            {% endif %}
+        </div>
+    </main>
+
+
+    <footer>
+        <p>Realizado por Daniel Alejandro Bernal Sánchez, Diego Alejandro Vacca Rodriguez y Carlos Dariel Pinilla
+            Ritiva<br>Para la asignatura de Machine Learning 601N</p>
+    </footer>
+
+</body>
+
+</html>

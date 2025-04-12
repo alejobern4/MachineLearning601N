@@ -1,10 +1,23 @@
 from flask import Flask, render_template, request
 from datetime import datetime
 import re
-from . import linearRegression
-from .regresionLogistica import regresion_logisitica, prediccion
+import linearRegression
+from regresionLogistica import regresion_logisitica, prediccion
+from conexionLocalBd import get_local_connection
+from conexionRenderBd import get_render_connection
+from convertidorImagenes import convertirImagen
 
 app = Flask(__name__)
+
+
+def probar_conexion():
+    try:
+        conn = get_local_connection()
+        print("Conexión exitosa")
+    except Exception as e:
+        print("Error al conectar con la base de datos:")
+        print(e)
+
 
 @app.route("/")
 def home():
@@ -57,3 +70,57 @@ def regresionLogistica():
         prediction = prediccion(nivel, frecuencia, dispositivo)
 
     return render_template('regresionLogistica.html', result=result, prediction=prediction, plot_url=plot_url)
+
+@app.route("/modelosClasificacion")
+def mostrarModelos():
+    conn = get_local_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("SELECT Id_Modelo, Nombre_Modelo FROM modelos_ml")
+    modelos = cursor.fetchall()
+    
+    cursor.close()
+    conn.close()
+    
+    return render_template("modelosClasificacion.html", modelos=modelos)
+
+@app.route("/modelosClasificacion/<int:modelo_id>")
+def detalle_modelo(modelo_id):
+    conn = get_local_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT Id_Modelo, Nombre_Modelo, Descripcion 
+        FROM modelos_ml 
+        WHERE Id_Modelo = %s
+    """, (modelo_id,))
+    modelo = cursor.fetchone()
+
+    cursor.execute("""
+        SELECT Id_Modelo, Nombre_Modelo, Descripcion 
+        FROM modelos_ml
+    """)
+    modelos = cursor.fetchall()
+
+    cursor.execute("""
+        SELECT Id_Imagen, Nombre_Imagen, Imagen
+        FROM imagenes 
+        WHERE Id_Modelo = %s
+    """, (modelo_id,))
+    imagenes = cursor.fetchall()
+    imagenes64 = convertirImagen(imagenes)
+
+    cursor.execute("""
+        SELECT Nombre_Link
+        FROM fuentes_consulta 
+        WHERE Id_Modelo = %s
+    """, (modelo_id,))
+    fuentes = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    if modelo:
+        return render_template("detalleModelo.html", modelo=modelo, modelos=modelos, imagenes64=imagenes64, fuentes=fuentes)
+    else:
+        return "Modelo no encontrado", 404
