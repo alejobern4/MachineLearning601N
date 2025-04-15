@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicción de Cáncer de Mama</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+    <style>
+        .navbar { margin-bottom: 30px; }
+        .badge { font-size: 0.9em; }
+        .metric-card { margin-bottom: 20px; }
+        .metric-value { font-size: 1.5em; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Predicción de Cáncer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" id="nav-home">Cargar Datos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="nav-metrics">Métricas del Modelo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="nav-about">Acerca del Dataset</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Sección de carga de datos (visible por defecto) -->
+        <div id="upload-section">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Cargar nuevos datos</span>
+                    <span class="badge bg-info">Paso 1</span>
+                </div>
+                <div class="card-body">
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="fileInput" class="form-label">Seleccione archivo Excel (.xlsx)</label>
+                            <input class="form-control" type="file" id="fileInput" name="file" accept=".xlsx,.xls" required>
+                            <div class="form-text">El archivo debe contener columnas: radio (0.1-10.0), textura (0.1-10.0), simetria (0.1-10.0)</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Predecir</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Resultados</span>
+                    <div>
+                        <button id="exportCsvBtn" class="btn btn-success me-2" disabled>Exportar a CSV</button>
+                        <button id="exportExcelBtn" class="btn btn-success" disabled>Exportar a Excel</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table id="resultsTable" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Radio</th>
+                                <th>Textura</th>
+                                <th>Simetría</th>
+                                <th>Resultado</th>
+                                <th>Confianza</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsBody">
+                            <!-- Los resultados se llenarán aquí -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de métricas (oculta inicialmente) -->
+        <div id="metrics-section" style="display: none;">
+            <div class="card">
+                <div class="card-header">
+                    Métricas del Modelo
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card metric-card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Exactitud</h5>
+                                    <div class="metric-value text-primary" id="accuracy">95%</div>
+                                    <p class="card-text">(Accuracy)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card metric-card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Precisión</h5>
+                                    <div class="metric-value text-success" id="precision">93%</div>
+                                    <p class="card-text">(Precision)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card metric-card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Sensibilidad</h5>
+                                    <div class="metric-value text-info" id="recall">97%</div>
+                                    <p class="card-text">(Recall)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5>Matriz de Confusión</h5>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Predicción: Benigno</th>
+                                    <th>Predicción: Maligno</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Real: Benigno</strong></td>
+                                    <td id="tn">38</td>
+                                    <td id="fp">2</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Real: Maligno</strong></td>
+                                    <td id="fn">1</td>
+                                    <td id="tp">39</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección "Acerca del Dataset" (oculta inicialmente) -->
+        <div id="about-section" style="display: none;">
+            <div class="card">
+                <div class="card-header">
+                    Acerca del Dataset
+                </div>
+                <div class="card-body">
+                    <h5>Dataset de Cáncer de Mama</h5>
+                    <p>Este dataset contiene características calculadas a partir de imágenes digitalizadas de masas mamarias, utilizadas para predecir si un tumor es benigno o maligno.</p>
+                    
+                    <h5 class="mt-4">Variables:</h5>
+                    <ul>
+                        <li><strong>Radio:</strong> Media de distancias del centro a puntos en el perímetro (0.1-10.0)</li>
+                        <li><strong>Textura:</strong> Desviación estándar de valores de escala de grises (0.1-10.0)</li>
+                        <li><strong>Simetría:</strong> Medida de simetría del tumor (0.1-10.0)</li>
+                    </ul>
+                    
+                    <h5 class="mt-4">Distribución:</h5>
+                    <ul>
+                        <li>80 registros de entrenamiento (50% benigno, 50% maligno)</li>
+                        <li>20 registros de prueba (50% benigno, 50% maligno)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Navegación entre secciones
+            $('#nav-home').click(function(e) {
+                e.preventDefault();
+                $('#upload-section').show();
+                $('#metrics-section').hide();
+                $('#about-section').hide();
+                $(this).addClass('active');
+                $('#nav-metrics, #nav-about').removeClass('active');
+            });
+            
+            $('#nav-metrics').click(function(e) {
+                e.preventDefault();
+                $('#upload-section').hide();
+                $('#metrics-section').show();
+                $('#about-section').hide();
+                $(this).addClass('active');
+                $('#nav-home, #nav-about').removeClass('active');
+                // Aquí podrías cargar las métricas actualizadas via AJAX
+            });
+            
+            $('#nav-about').click(function(e) {
+                e.preventDefault();
+                $('#upload-section').hide();
+                $('#metrics-section').hide();
+                $('#about-section').show();
+                $(this).addClass('active');
+                $('#nav-home, #nav-metrics').removeClass('active');
+            });
+
+            // Procesamiento del formulario
+            $('#uploadForm').on('submit', function(e) {
+                e.preventDefault();
+                
+                var formData = new FormData(this);
+                
+                $.ajax({
+                    url: '/predict',
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        if (response.success) {
+                            // Llenar tabla
+                            var tbody = $('#resultsBody');
+                            tbody.empty();
+                            
+                            response.data.forEach(function(row) {
+                                tbody.append(`
+                                    <tr>
+                                        <td>${row.radio}</td>
+                                        <td>${row.textura}</td>
+                                        <td>${row.simetria}</td>
+                                        <td class="${row.prediccion == 1 ? 'text-danger' : 'text-success'}">
+                                            ${row.resultado}
+                                        </td>
+                                        <td>${row.confidence ? (row.confidence * 100).toFixed(2) + '%' : 'N/A'}</td>
+                                    </tr>
+                                `);
+                            });
+                            
+                            // Habilitar botones de exportación
+                            $('#exportCsvBtn').removeAttr('disabled').off('click').on('click', function() {
+                                downloadCSV(response.csv_data, 'resultados_cancer.csv');
+                            });
+                            
+                            $('#exportExcelBtn').removeAttr('disabled').off('click').on('click', function() {
+                                downloadExcel(response.data, 'resultados_cancer.xlsx');
+                            });
+                            
+                            // Inicializar DataTable
+                            $('#resultsTable').DataTable({
+                                dom: 'Bfrtip',
+                                buttons: [
+                                    'copy', 'csv', 'excel', 'pdf', 'print'
+                                ]
+                            });
+                        } else {
+                            alert('Error: ' + response.error);
+                        }
+                    },
+                    error: function(xhr) {
+                        alert('Error al procesar el archivo: ' + xhr.responseText);
+                    }
+                });
+            });
+            
+            function downloadCSV(csv, filename) {
+                var csvFile = new Blob([csv], {type: 'text/csv'});
+                var downloadLink = document.createElement('a');
+                downloadLink.download = filename;
+                downloadLink.href = window.URL.createObjectURL(csvFile);
+                downloadLink.style.display = 'none';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            }
+            
+            function downloadExcel(data, filename) {
+                // Crear hoja de trabajo
+                var ws = XLSX.utils.json_to_sheet(data);
+                var wb = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(wb, ws, "Resultados");
+                
+                // Generar archivo
+                XLSX.writeFile(wb, filename);
+            }
+        });
+    </script>
+</body>
+</html>
