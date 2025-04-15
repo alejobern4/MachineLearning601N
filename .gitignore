@@ -3,3 +3,6 @@
 Proyecto/.env
 Proyecto/__pycache__/linearRegression.cpython-313.pyc
 Proyecto/__pycache__/app.cpython-313.pyc
+Proyecto/__pycache__/app.cpython-313.pyc
+*.pkl
+/temp_results

@@ -1,0 +1,22 @@
+[
+    {"radio": 1.5, "textura": 2.1, "simetria": 1.7, "clase": 0},
+    {"radio": 4.0, "textura": 4.5, "simetria": 4.2, "clase": 1},
+    {"radio": 1.7, "textura": 2.3, "simetria": 1.8, "clase": 0},
+    {"radio": 3.9, "textura": 4.4, "simetria": 4.1, "clase": 1},
+    {"radio": 1.8, "textura": 2.4, "simetria": 1.9, "clase": 0},
+    {"radio": 3.7, "textura": 4.2, "simetria": 4.0, "clase": 1},
+    {"radio": 1.9, "textura": 2.5, "simetria": 2.0, "clase": 0},
+    {"radio": 3.5, "textura": 4.0, "simetria": 3.8, "clase": 1},
+    {"radio": 2.0, "textura": 2.6, "simetria": 2.1, "clase": 0},
+    {"radio": 3.3, "textura": 3.8, "simetria": 3.6, "clase": 1},
+    {"radio": 2.1, "textura": 2.7, "simetria": 2.2, "clase": 0},
+    {"radio": 3.1, "textura": 3.6, "simetria": 3.4, "clase": 1},
+    {"radio": 2.2, "textura": 2.8, "simetria": 2.3, "clase": 0},
+    {"radio": 2.9, "textura": 3.4, "simetria": 3.2, "clase": 1},
+    {"radio": 2.3, "textura": 2.9, "simetria": 2.4, "clase": 0},
+    {"radio": 2.7, "textura": 3.2, "simetria": 3.0, "clase": 1},
+    {"radio": 1.4, "textura": 2.0, "simetria": 1.5, "clase": 0},
+    {"radio": 4.1, "textura": 4.6, "simetria": 4.3, "clase": 1},
+    {"radio": 1.6, "textura": 2.2, "simetria": 1.7, "clase": 0},
+    {"radio": 3.8, "textura": 4.3, "simetria": 4.1, "clase": 1}
+  ]
