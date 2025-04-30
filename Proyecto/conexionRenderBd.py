@@ -11,15 +11,15 @@ db_user = os.getenv("DB_USER")
 db_password = os.getenv("DB_PASSWORD")
 
 def get_render_connection():
-
+    
     try:
         return psycopg2.connect(
-        host=db_host,
-        database=db_name,
-        user=db_user,
-        password=db_password,
-        port=5432,
-        sslmode="require"
-    )
+            host=db_host,
+            database=db_name,
+            user=db_user,
+            password=db_password,
+            port=db_port or 5432,
+            sslmode="require"
+        )
     except Exception as e:
-        return f"Error: {e}"
+        raise RuntimeError(f"Error al conectar a la base de datos: {e}")
