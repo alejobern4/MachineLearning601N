@@ -39,7 +39,7 @@ def allowed_file(filename):
 
 def probar_conexion():
     try:
-        conn = get_local_connection()
+        conn = get_render_connection()
         print("Conexión exitosa")
     except Exception as e:
         print("Error al conectar con la base de datos:")
@@ -100,7 +100,7 @@ def regresionLogistica():
 
 @app.route("/modelosClasificacion")
 def mostrarModelos():
-    conn = get_local_connection()
+    conn = get_render_connection()
     cursor = conn.cursor()
     
     cursor.execute("SELECT Id_Modelo, Nombre_Modelo FROM modelos_ml")
@@ -113,7 +113,7 @@ def mostrarModelos():
 
 @app.route("/modelosClasificacion/<int:modelo_id>")
 def detalle_modelo(modelo_id):
-    conn = get_local_connection()
+    conn = get_render_connection()
     cursor = conn.cursor()
 
     cursor.execute("""
