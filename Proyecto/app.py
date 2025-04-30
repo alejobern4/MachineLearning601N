@@ -9,12 +9,12 @@ import joblib
 import logging
 from io import BytesIO
 from werkzeug.utils import secure_filename
-import linearRegression
-from regresionLogistica import regresion_logisitica, prediccion
-from conexionLocalBd import get_local_connection
-from conexionRenderBd import get_render_connection
-from convertidorImagenes import convertirImagen
-from randomForest import metricas
+from . import linearRegression
+from .regresionLogistica import regresion_logisitica, prediccion
+from .conexionLocalBd import get_local_connection
+from .conexionRenderBd import get_render_connection
+from .convertidorImagenes import convertirImagen
+from .randomForest import metricas
 
 
 app = Flask(__name__)
