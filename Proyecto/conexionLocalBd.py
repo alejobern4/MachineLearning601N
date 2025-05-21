@@ -1,13 +1,13 @@
-import psycopg2
-from dotenv import load_dotenv
-import os
+import mysql.connector
 
-load_dotenv()
-
-db_url = os.getenv("DB_URL")
-
-def get_render_connection():
+def get_local_connection():
     try:
-        return psycopg2.connect(db_url)
+        return mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="", 
+        database="bd_ml601n",
+        port=3306
+    )
     except Exception as e:
-        raise RuntimeError(f"Error al conectar a la base de datos: {e}")
+        return f"Error: {e}"
